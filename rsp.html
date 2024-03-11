@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rsp.css">
+</head>
+<body>
+    <h1>Rock-Paper-Scissors</h1>
+    <div class="buttons">
+        <button id="scissors" onclick="startTheGame('scissors')">✌️</button>
+        <button id="rock" onclick="startTheGame('rock')">👊</button>
+        <button id="paper" onclick="startTheGame('paper')">🤚</button>
+    </div>
+    
+    <div class="results">
+        <div id="playerChoice">PLAYER:</div>
+        <div id="computerChoice">COMPUTER</div>
+    </div>
+    
+    <div class="points">
+        <div id="playerPoints">Player:0</div>
+        <div id="computerPoints">Computer:0</div>
+    </div>
+    <div id="results"></div>
+    <h1 id="won"></h1>
+    <h1 id="lost"></h1>
+     <input type="number" id="rounds" placeholder="" max="30" min="2">
+    <script src="rsp.js"></script>
+</body>
+</html>
