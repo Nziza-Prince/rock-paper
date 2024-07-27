@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="rsp.css">
+    <title>Rock-Paper-Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/icons8-peace-96.png">
+    <link rel="stylesheet" href="./rsp.css">
 </head>
 <body>
-    <h1>Rock-Paper-Scissors</h1>
-    <div class="buttons">
-        <button id="scissors" onclick="startTheGame('scissors')">✌️</button>
-        <button id="rock" onclick="startTheGame('rock')">👊</button>
-        <button id="paper" onclick="startTheGame('paper')">🤚</button>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <h2>Try your luck!</h2>
+        <div class="scoreboard">
+            <div class="score">
+                <div class="lable">You:</div>
+                <div id="playerPoints">0</div>
+                <div id="playerChoice" class="choice-icon">✊</div>
+            </div>
+            <div class="score">
+                <div class="lable">Computer:</div>
+                <div id="computerPoints">0</div>
+                <div id="computerChoice" class="choice-icon">✌️</div>
+            </div>
+        </div>
+        <h3 id="results" class="results-text">Choose One!</h3>
+        <div class="buttons">
+            <button id="rock" onclick="startTheGame('rock')">✊</button>
+            <button id="paper" onclick="startTheGame('paper')">🖐️</button>
+            <button id="scissors" onclick="startTheGame('scissors')">✌️</button>
+        </div>
+        <div class="rounds-container">
+            <label for="rounds">Rounds:</label>
+            <input type="number" id="rounds" placeholder="Enter rounds" max="30" min="2">
+        </div>
+        <button class="reset-button" onclick="resetGame()">Reset Game</button>
     </div>
-    
-    <div class="results">
-        <div id="playerChoice">PLAYER:</div>
-        <div id="computerChoice">COMPUTER</div>
-    </div>
-    
-    <div class="points">
-        <div id="playerPoints">Player:0</div>
-        <div id="computerPoints">Computer:0</div>
-    </div>
-    <div id="results"></div>
-    <h1 id="won"></h1>
-    <h1 id="lost"></h1>
-     <input type="number" id="rounds" placeholder="" max="30" min="2">
-    <script src="rsp.js"></script>
+    <script src="./rsp.js"></script>
 </body>
 </html>
